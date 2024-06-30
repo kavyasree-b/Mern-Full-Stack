@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Alphabetical String</title>
+    <script>
+        function alphabetizeString(str) {
+            // Convert the string to an array of characters
+            let charArray = str.split('');
+            
+            // Sort the array in alphabetical order
+            let sortedArray = charArray.sort();
+            
+            // Join the sorted array back into a string
+            let sortedStr = sortedArray.join('');
+            
+            return sortedStr;
+        }
+
+        function handleAlphabetize() {
+            // Get the input value
+            let inputString = document.getElementById('stringInput').value;
+
+            // Alphabetize the string
+            let alphabetized = alphabetizeString(inputString);
+
+            // Display the result
+            document.getElementById('result').innerText = 'Reverse Alphabetical String: ' + alphabetized;
+        }
+    </script>
+</head>
+<body>
+    <h1>Reverse Alphabetical String</h1>
+    <p>Enter a string to reverse its letters:</p>
+    <input type="text" id="stringInput" />
+    <button onclick="handleAlphabetize()">Reverse</button>
+    <p id="result"></p>
+</body>
+</html>
